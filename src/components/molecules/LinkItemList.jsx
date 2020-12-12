@@ -108,7 +108,7 @@ const LinkItemList = () => {
             }
           }>
           {/* <i className={"iconLink fas fa-calculator"}></i> */}
-          <i className="iconLink fas fa-chart-bar"></i>
+          <i className="iconLink fas fa-chart-pie"></i>
           <span className="cartelLink">Gráficos</span>  {/* CHANGED */}
           {/* <span className="cartelLink">{t("link.calculator")}</span> */}
         </Link>
