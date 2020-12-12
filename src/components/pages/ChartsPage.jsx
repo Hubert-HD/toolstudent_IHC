@@ -57,6 +57,7 @@ const ChartsPage = () => (
 
         {/* BAR */}
         <div className="marco">
+        <h1>Gráfico de Barras</h1>
             <Bar 
                 data = {{
                     labels: ['IHC', 'EMAT', 'ADA', 'MIR', 'AC', 'EE'],
@@ -101,6 +102,7 @@ const ChartsPage = () => (
 
         {/* PIE */}
         <div className="marco">
+            <h1>Gráfico de Tipo Torta</h1>
             <Pie 
                 data = {{
                     labels: ['MIR','IHC', 'EE', 'EMAT', 'ADA', 'AC'],
@@ -136,6 +138,7 @@ const ChartsPage = () => (
 
         {/* LINE */}
         <div className="marco">
+            <h1>Gráfico Lineal</h1>
             <Line 
                 data = {{
                     labels: ['Entrada ', 'Examen 1', 'Examen 2', 'Subsanación', 'Examen 3'],
@@ -182,6 +185,7 @@ const ChartsPage = () => (
 
         {/* RADAR */}
         <div className="marco">
+            <h1>Gráfico de Tipo Radar</h1>
             <Radar 
                 data = {{
                     labels: ['IHC', 'EMAT', 'MIR', 'ADA', 'EE', 'AC'],
