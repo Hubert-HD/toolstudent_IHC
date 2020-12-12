@@ -98,10 +98,9 @@ const ChartsPage = () => (
         <div className="marco">
             <Pie 
                 data = {{
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    labels: ['MIR','IHC', 'EE', 'EMAT', 'ADA', 'AC'],
                     datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
+                        data: [1, 3, 1, 2, 4, 2],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
@@ -126,13 +125,6 @@ const ChartsPage = () => (
                 width={600}
                 options={{
                     maintainAspectRatio: false,
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
                 }}
             />
         </div>
@@ -141,9 +133,9 @@ const ChartsPage = () => (
         <div className="marco">
             <Radar 
                 data = {{
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    labels: ['IHC', 'EMAT', 'MIR', 'ADA', 'EE', 'AC'],
                     datasets: [{
-                        label: '# of Votes',
+                        label: 'Notas finales del semestre 2020 B',
                         data: [12, 19, 3, 5, 2, 3],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -169,13 +161,6 @@ const ChartsPage = () => (
                 width={600}
                 options={{
                     maintainAspectRatio: false,
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
                 }}
             />
         </div>
@@ -184,7 +169,7 @@ const ChartsPage = () => (
         <div className="marco">
             <Polar 
                 data = {{
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    labels: ['IHC', 'EMAT', 'MIR', 'ADA', 'EE', 'AC'],
                     datasets: [{
                         label: '# of Votes',
                         data: [12, 19, 3, 5, 2, 3],
