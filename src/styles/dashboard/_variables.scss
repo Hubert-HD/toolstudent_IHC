@@ -1,0 +1,54 @@
+// Estilos Dashboard
+
+// Sidebar-Layout
+$widthSidebar: 20em;
+$widthMinSidebar: 4em;
+$widthMaxSidebar: 80%;
+$timeTransitionSidebar: 0.5s;
+
+$color-text: white;
+
+//Sidebar-Theme
+$heightContainerUser: 5em;
+$bg-sidebar: #0572bb;
+
+//Content-Layout
+$heightHeader: 4em;
+$heightFooter: 4em;
+$bg-header: white;
+$bg-main: #e0f3ff;
+$bg-footer: #0082d8;
+
+@mixin style-design($visible, $position, $z-index, $content, $orientation, $bg-design, $color-design) {
+    @if $visible {
+        @if $showDesing {
+            position: $position;
+            z-index: $z-index;
+            &::after{
+                overflow: hidden;
+                box-sizing: border-box;
+                content: $content;
+                position: absolute;        
+                z-index:-1;
+                top: 0;
+                height: 0;
+                width: 100%;
+                height: 100%;
+    
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                border: 3px solid $bg-design;
+                background-color: $color-design;
+                font-size: 2em;
+                font-weight: bold;
+                color: $bg-design;
+                @if $orientation{
+                    writing-mode: vertical-lr;
+                    text-orientation: upright;
+                } 
+            }
+        }
+    }
+}
