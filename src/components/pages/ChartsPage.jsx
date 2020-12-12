@@ -1,6 +1,8 @@
 import React from "react"
 import "../../styles/curriculum.scss"
 
+import "../../styles/curriculum.css"
+
 import {Bar, Line, Pie, Radar, Polar} from 'react-chartjs-2';
 
 const ChartsPage = () => (
@@ -8,6 +10,7 @@ const ChartsPage = () => (
         
         {/* POLAR */}
         <div className="marco">
+            <h1>Gráfico Polar</h1>
             <Polar 
                 data = {{
                     labels: ['IHC', 'EMAT', 'MIR', 'ADA', 'EE', 'AC'],
