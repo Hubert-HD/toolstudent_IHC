@@ -107,7 +107,8 @@ const LinkItemList = () => {
             history.push("/charts")
             }
           }>
-          <i className={"iconLink fas fa-calculator"}></i>
+          {/* <i className={"iconLink fas fa-calculator"}></i> */}
+          <i className="iconLink fas fa-chart-bar"></i>
           <span className="cartelLink">Gráficos</span>  {/* CHANGED */}
           {/* <span className="cartelLink">{t("link.calculator")}</span> */}
         </Link>
