@@ -37,7 +37,7 @@ const ChartsPage = () => (
                     }],
                     
                 }}
-                height={400}
+                height={410}
                 width={600}
                 options={{
                     maintainAspectRatio: false,
