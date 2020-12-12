@@ -6,6 +6,52 @@ import {Bar, Line, Pie, Radar, Polar} from 'react-chartjs-2';
 const ChartsPage = () => (
     <div className="curriculum-container">
         
+        {/* POLAR */}
+        <div className="marco">
+            <Polar 
+                data = {{
+                    labels: ['IHC', 'EMAT', 'MIR', 'ADA', 'EE', 'AC'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [14, 17, 13, 18, 11, 16],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }],
+                    
+                }}
+                height={400}
+                width={600}
+                options={{
+                    maintainAspectRatio: false,
+                    scale: {
+                        angleLines: {
+                            display: false
+                        },
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 20
+                        }
+                    }
+                }}
+            />
+        </div>
+
+
         {/* BAR */}
         <div className="marco">
             <Bar 
@@ -45,6 +91,42 @@ const ChartsPage = () => (
                             }
                         }]
                     }
+                }}
+            />
+        </div>
+
+
+        {/* PIE */}
+        <div className="marco">
+            <Pie 
+                data = {{
+                    labels: ['MIR','IHC', 'EE', 'EMAT', 'ADA', 'AC'],
+                    datasets: [{
+                        data: [1, 3, 1, 2, 4, 2],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }],
+                    
+                }}
+                height={400}
+                width={600}
+                options={{
+                    maintainAspectRatio: false,
                 }}
             />
         </div>
@@ -94,40 +176,6 @@ const ChartsPage = () => (
             />
         </div>
 
-        {/* PIE */}
-        <div className="marco">
-            <Pie 
-                data = {{
-                    labels: ['MIR','IHC', 'EE', 'EMAT', 'ADA', 'AC'],
-                    datasets: [{
-                        data: [1, 3, 1, 2, 4, 2],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }],
-                    
-                }}
-                height={400}
-                width={600}
-                options={{
-                    maintainAspectRatio: false,
-                }}
-            />
-        </div>
 
         {/* RADAR */}
         <div className="marco">
@@ -164,52 +212,7 @@ const ChartsPage = () => (
             />
         </div>
 
-        {/* POLAR */}
-        <div className="marco">
-            <Polar 
-                data = {{
-                    labels: ['IHC', 'EMAT', 'MIR', 'ADA', 'EE', 'AC'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }],
-                    
-                }}
-                height={400}
-                width={600}
-                options={{
-                    maintainAspectRatio: false,
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
-                }}
-            />
-        </div>
-
-
-
-
+        
     </div>
 )
 
