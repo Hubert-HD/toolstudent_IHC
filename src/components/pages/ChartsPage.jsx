@@ -99,7 +99,6 @@ const ChartsPage = () => (
             />
         </div>
 
-
         {/* PIE */}
         <div className="marco">
             <h1>Gráfico de Tipo Torta</h1>
