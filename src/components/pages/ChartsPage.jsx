@@ -1,6 +1,7 @@
 import React from "react"
 import "../../styles/curriculum.scss"
 
+// Nuevos estilos
 import "../../styles/curriculum.css"
 
 import {Bar, Line, Pie, Radar, Polar} from 'react-chartjs-2';
@@ -53,7 +54,6 @@ const ChartsPage = () => (
                 }}
             />
         </div>
-
 
         {/* BAR */}
         <div className="marco">
