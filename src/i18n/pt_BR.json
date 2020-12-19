@@ -67,5 +67,17 @@
   "chart.bar": "Gráfico de Barras",
   "chart.pie": "Gráfico de Pizza",
   "chart.linear": "Gráfico Linear",
-  "chart.radar": "Gráfico de Radar"
+  "chart.radar": "Gráfico de Radar",
+  "sitemap.note": "Vá para minhas notas",
+  "sitemap.dashboard": "Dashboard",
+  "sitemap.viewCourse": "Veja meus cursos",
+  "sitemap.addCourse": "Adicionar um novo curso",
+  "sitemap.actions": "Ações com meus cursos",
+  "sitemap.editCourse": "Editar um dos meus cursos",
+  "sitemap.deleteCourse": "Excluir um curso",
+  "sitemap.addTask": "Adicionar uma nova tarefa",
+  "sitemap.curriculum": "Veja a malha do currículo",
+  "sitemap.calc": "Vá para a calculadora",
+  "sitemap.graph": "Veja meus gráficos",
+  "sitemap.map": "Vá para o mapa do site"
 }

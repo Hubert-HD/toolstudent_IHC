@@ -2,9 +2,6 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import "../../styles/curriculum.scss"
 
-// Nuevos estilos
-import "../../styles/curriculum.css"
-
 import {Bar, Line, Pie, Radar, Polar} from 'react-chartjs-2';
 
 const ChartsPage = () => {
@@ -16,7 +13,7 @@ const ChartsPage = () => {
         
         {/* POLAR */}
         <div className="marco">
-            <h1>{t("chart.polar")}</h1>
+            <h1 className="marco__title">{t("chart.polar")}</h1>
             <Polar 
                 data = {{
                     labels: ['IHC', 'EMAT', 'MIR', 'ADA', 'EE', 'AC'],
@@ -24,12 +21,12 @@ const ChartsPage = () => {
                         label: '# of Votes',
                         data: [14, 17, 13, 18, 11, 16],
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
+                            'rgba(255, 99, 132, 0.7)',
+                            'rgba(54, 162, 235, 0.7)',
+                            'rgba(255, 206, 86, 0.7)',
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(153, 102, 255, 0.7)',
+                            'rgba(255, 159, 64, 0.7)'
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
@@ -62,7 +59,7 @@ const ChartsPage = () => {
 
         {/* BAR */}
         <div className="marco">
-            <h1>{t("chart.bar")}</h1>
+            <h1 className="marco__title">{t("chart.bar")}</h1>
             <Bar 
                 data = {{
                     labels: ['IHC', 'EMAT', 'ADA', 'MIR', 'AC', 'EE'],
@@ -70,12 +67,12 @@ const ChartsPage = () => {
                         label: '2020 B',
                         data: [14, 17, 13, 20, 11, 16],
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
+                            'rgba(255, 99, 132, 0.7)',
+                            'rgba(54, 162, 235, 0.7)',
+                            'rgba(255, 206, 86, 0.7)',
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(153, 102, 255, 0.7)',
+                            'rgba(255, 159, 64, 0.7)'
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
@@ -106,19 +103,19 @@ const ChartsPage = () => {
 
         {/* PIE */}
         <div className="marco">
-            <h1>{t("chart.pie")}</h1>
+            <h1 className="marco__title">{t("chart.pie")}</h1>
             <Pie 
                 data = {{
                     labels: ['MIR','IHC', 'EE', 'EMAT', 'ADA', 'AC'],
                     datasets: [{
                         data: [1, 3, 1, 2, 4, 2],
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
+                            'rgba(255, 99, 132, 0.7)',
+                            'rgba(54, 162, 235, 0.7)',
+                            'rgba(255, 206, 86, 0.7)',
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(153, 102, 255, 0.7)',
+                            'rgba(255, 159, 64, 0.7)'
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
@@ -142,7 +139,7 @@ const ChartsPage = () => {
 
         {/* LINE */}
         <div className="marco">
-            <h1>{t("chart.linear")}</h1>
+            <h1 className="marco__title">{t("chart.linear")}</h1>
             <Line 
                 data = {{
                     labels: ['E1', 'EC1', 'E2', 'EC2', 'E3', 'EC3'],
@@ -150,7 +147,7 @@ const ChartsPage = () => {
                         label: 'EMAT',
                         data: [13, 10, 14, 12, 11, 16],
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 99, 132, 0.7)',
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
@@ -161,7 +158,7 @@ const ChartsPage = () => {
                         label: 'IHC',
                         data: [10, 12, 8, 14, 19, 13],
                         backgroundColor: [
-                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(54, 162, 235, 0.7)',
                         ],
                         borderColor: [
                             'rgba(54, 162, 235, 1)'
@@ -189,7 +186,7 @@ const ChartsPage = () => {
 
         {/* RADAR */}
         <div className="marco">
-            <h1>{t("chart.radar")}</h1>
+            <h1 className="marco__title">{t("chart.radar")}</h1>
             <Radar 
                 data = {{
                     labels: ['IHC', 'EMAT', 'MIR', 'ADA', 'EE', 'AC'],
@@ -197,7 +194,7 @@ const ChartsPage = () => {
                         label: '2020 B',
                         data: [15, 17, 19, 13, 16, 11],
                         backgroundColor: [
-                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(153, 102, 255, 0.7)',
                         ],
                         borderColor: [
                             'rgba(153, 102, 255, 1)',

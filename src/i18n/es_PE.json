@@ -67,7 +67,19 @@
   "chart.bar": "Gráfico de Barras",
   "chart.pie": "Gráfico Circular",
   "chart.linear": "Gráfico Lineal",
-  "chart.radar": "Gráfico de Radar"
+  "chart.radar": "Gráfico de Radar",
+  "sitemap.note": "Ir a mis notas",
+  "sitemap.dashboard": "Dashboard",
+  "sitemap.viewCourse": "Ver mis curso",
+  "sitemap.addCourse": "Añadir un nuevo curso",
+  "sitemap.actions": "Acciones con mis cursos",
+  "sitemap.editCourse": "Editar uno de mis cursos",
+  "sitemap.deleteCourse": "Eliminar un curso",
+  "sitemap.addTask": "Añadir una nueva tarea",
+  "sitemap.curriculum": "Ver la malla curricular",
+  "sitemap.calc": "Ir a la calculadora",
+  "sitemap.graph": "Ver mis graficos",
+  "sitemap.map": "Ir al mapa de sitio"
   
 }
 

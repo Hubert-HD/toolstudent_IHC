@@ -1,153 +1,34 @@
-import React, { useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 const LinkItemList = () => {
   const {t} = useTranslation()
-  const history = useHistory();
-  const [linkActive, setLinkActive] = useState({
-    note : history.location.pathname === "/",
-    course: history.location.pathname === "/cursos",
-    task: history.location.pathname === "/tareas",
-    curriculum: history.location.pathname === "/malla-curricular",
-    calculator: history.location.pathname === "/calculadora",
-    charts: history.location.pathname === "/charts",
-    sitemap: history.location.pathname == "/sitemap",
-  })
+
   return (
     <ul className="container-linkList">
-      <li className={"container-linkItem"}>
-        <Link className={(linkActive.note) ? "linkItem linkItem-active" : "linkItem"} onClick={() => {
-            setLinkActive({
-              note : true,
-              course: false,
-              task: false,
-              curriculum: false,
-              calculator: false,
-              charts: false,
-              sitemap: false,
-            })
-            history.push("/")
-          }}>
-          <i className={"iconLink fas fa-chart-bar"}></i>
-          <span className="cartelLink">{t("link.note")}</span>
-        </Link>
-      </li>
-      <li className={"container-linkItem"}>
-        <Link className={(linkActive.course) ? "linkItem linkItem-active" : "linkItem"} onClick={() => {
-            setLinkActive({
-              note: false,
-              course: true,
-              task: false,
-              curriculum: false,
-              calculator: false,
-              charts: false,
-              sitemap: false,
-            })
-            history.push("/cursos")
-            }
-          }>
-          <i className={"iconLink fas fa-book"}></i>
-          <span className="cartelLink">{t("link.course")}</span>
-        </Link>
-      </li>
-      <li className={"container-linkItem"}>
-        <Link className={(linkActive.task) ? "linkItem linkItem-active" : "linkItem"} onClick={() => {
-            setLinkActive({
-              note: false,
-              course: false,
-              task: true,
-              curriculum: false,
-              calculator: false,
-              charts: false,
-              sitemap: false,
-            })
-            history.push("/tareas")
-            }
-          }>
-          <i className={"iconLink fas fa-tasks"}></i>
-          <span className="cartelLink">{t("link.task")}</span>
-        </Link>
-      </li>
-      <li className={"container-linkItem"}>
-        <Link className={(linkActive.curriculum) ? "linkItem linkItem-active" : "linkItem"} onClick={() => {
-            setLinkActive({
-              note: false,
-              course: false,
-              task: false,
-              curriculum: true,
-              calculator: false,
-              charts: false,
-              sitemap: false,
-            })
-            history.push("/malla-curricular")
-            }
-          }>
-          <i className={"iconLink fas fa-project-diagram"}></i>
-          <span className="cartelLink">{t("link.curriculum")}</span>
-        </Link>
-      </li>
-      <li className={"container-linkItem"}>
-        <Link className={(linkActive.calculator) ? "linkItem linkItem-active" : "linkItem"} onClick={() => {
-            setLinkActive({
-              note: false,
-              course: false,
-              task: false,
-              curriculum: false,
-              calculator: true,
-              charts: false,
-              sitemap: false,
-            })
-            history.push("/calculadora")
-            }
-          }>
-          <i className={"iconLink fas fa-calculator"}></i>
-          <span className="cartelLink">{t("link.calculator")}</span>
-        </Link>
-      </li>
-
-      {/* CHANGED */}
-      <li className={"container-linkItem"}>
-        <Link className={(linkActive.charts) ? "linkItem linkItem-active" : "linkItem"} onClick={() => {
-            setLinkActive({
-              note: false,
-              course: false,
-              task: false,
-              curriculum: false,
-              calculator: false,
-              charts: true,
-              sitemap: false,
-            })
-            history.push("/charts")
-            }
-          }>
-          {/* <i className={"iconLink fas fa-calculator"}></i> */}
-          <i className="iconLink fas fa-chart-pie"></i>
-          <span className="cartelLink">{t("link.charts")}</span>  {/* CHANGED */}
-          {/* <span className="cartelLink">{t("link.calculator")}</span> */}
-        </Link>
-      </li>
-
-      <li className={"container-linkItem"}>
-        <Link className={(linkActive.sitemap) ? "linkItem linkItem-active" : "linkItem"} onClick={() => {
-            setLinkActive({
-              note: false,
-              course: false,
-              task: false,
-              curriculum: false,
-              calculator: false,
-              charts: false,
-              sitemap: true,
-            })
-            history.push("/sitemap")
-            }
-          }>
-          <i className={"iconLink fas fa-sitemap"}></i>
-          <span className="cartelLink">{t("link.sitemap")}</span>
-        </Link>
-      </li>
+      <LinkItem icon="fas fa-address-book" cartel={t("link.note")} to="/" />
+      <LinkItem icon="fas fa-book" cartel={t("link.course")} to="/cursos" />
+      <LinkItem icon="fas fa-tasks" cartel={t("link.task")} to="/tareas" />
+      <LinkItem icon="fas fa-project-diagram" cartel={t("link.curriculum")} to="/malla-curricular" />
+      <LinkItem icon="fas fa-calculator" cartel={t("link.calculator")} to="/calculadora" />
+      <LinkItem icon="fas fa-chart-pie" cartel={t("link.charts")} to="/charts" />
+      <LinkItem icon="fas fa-sitemap" cartel={t("link.sitemap")} to="/sitemap" />
     </ul>
-    )
-  }
+  )
+}
+
+const LinkItem = ({icon, cartel, to}) => {
+  const location = useLocation();
+
+  return(
+    <li className={"container-linkItem"}>
+      <Link className={"linkItem" + (location.pathname === to ? " linkItem-active" : " link--desactive")} to={to}>
+        <i className={"iconLink " + icon}/>
+        <span className="cartelLink">{cartel}</span>
+      </Link>
+    </li>
+  )
+}
   
 export default LinkItemList;

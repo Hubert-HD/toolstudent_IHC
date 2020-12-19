@@ -67,5 +67,17 @@
   "chart.bar": "Bar Chart",
   "chart.pie": "Pie Chart",
   "chart.linear": "Linear Chart",
-  "chart.radar": "Radar Chart"
+  "chart.radar": "Radar Chart",
+  "sitemap.note": "Go to my notes",
+  "sitemap.dashboard": "Dashboard",
+  "sitemap.viewCourse": "See my courses",
+  "sitemap.addCourse": "Add a new course",
+  "sitemap.actions": "Actions with my courses",
+  "sitemap.editCourse": "Edit one of my courses",
+  "sitemap.deleteCourse": "Delete a course",
+  "sitemap.addTask": "Add a new task",
+  "sitemap.curriculum": "See the curriculum mesh",
+  "sitemap.calc": "Go to calculator",
+  "sitemap.graph": "See my graphics",
+  "sitemap.map": "Go to sitemap"
 }

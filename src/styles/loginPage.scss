@@ -27,9 +27,9 @@
     flex-direction: column;
 
     // Theme
-    background-color:#ecf0f1;
+    background-color:#FAFAFA;
     border-radius: 0.5em;
-    border: 2px solid #f1c40f;
+    border: 2px solid #04558B;
 
     &__title{
         font-size: 48px;
@@ -40,10 +40,10 @@
         align-items: center;
         
         margin: 0.3rem;
-        border-bottom: 2px solid #f1c40f;
+        border-bottom: 2px solid #04558B;
         text-align: center;
         font-family: 'Strait', sans-serif;
-        color: #3498db;
+        color: #04558B;
 
         @media only screen and (max-width: 500px) {
             font-size: 36px;
@@ -82,7 +82,7 @@
         display: block;
         background-color: white;
         border-radius: 1rem;
-        border: 2px solid #f1c40f;
+        border: 2px solid #04558B;
         padding: 0 0.5rem;
         min-width: 0;
 
@@ -99,8 +99,8 @@
         }
 
         &:focus{
-            border: 2px solid #f39c12;
-            box-shadow: 0 0 5px #f39c12;
+            border: 2px solid #023f68;
+            box-shadow: 0 0 5px #023f68;
             outline: none;
         }
 
@@ -118,7 +118,7 @@
 
 
 .icon_log{
-    color: #0082d8;
+    color: #04558B;
     font-size: 30px;
     margin-right: 10px;
     @media only screen and (max-width: 500px) {
@@ -140,7 +140,7 @@
     // theme
     outline: none;
     font-size: 1.3rem;
-    background-color: #3498db;
+    background-color: #0569ac;
     color: #f0f0f0;
     border-radius: 0.5rem;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
@@ -161,7 +161,7 @@
     }
 
     &:hover{
-        background-color: #1d85ca;
+        background-color: #04558B;
         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
     }  
@@ -232,7 +232,7 @@
 
     .olvido{
         
-        color: #0082d8;
+        color: #04558B;
         font-size: 1.3rem;
         font-family: 'Poor Story', cursive;
         font-weight: bold;
@@ -245,7 +245,7 @@
     .cuenta{
         grid-column: 1 / 3;
         grid-row: 2 / 3;
-        color: #0082d8;
+        color: #04558B;
         font-size: 1.3rem;
         font-family: 'Poor Story', cursive;
         font-weight: bold;
@@ -270,9 +270,9 @@
     flex-direction: column;
 
     // Theme
-    background-color:#ecf0f1;
+    background-color:#FAFAFA;
     border-radius: 0.5em;
-    border: 2px solid #f1c40f;
+    border: 2px solid #04558B;
 
     &__title{
         font-size: 48px;
@@ -283,10 +283,10 @@
         align-items: center;
         
         margin: 0.3rem;
-        border-bottom: 2px solid #f1c40f;
+        border-bottom: 2px solid #04558B;
         text-align: center;
         font-family: 'Strait', sans-serif;
-        color: #3498db;
+        color: #04558B;
 
         @media only screen and (max-width: 500px) {
             font-size: 36px;
@@ -297,7 +297,7 @@
         font-family: 'Poor Story', cursive;
         margin: 1rem 2.2rem;
         margin-bottom: 0;
-        color: #34495e;
+        color: #04558B;
         font-size: 20px;
     }
 
@@ -356,7 +356,7 @@
         display: block;
         background-color: white;
         border-radius: 1rem;
-        border: 2px solid #f1c40f;
+        border: 2px solid #04558B;
         padding: 0 0.5rem;
         min-width: 0;
 
@@ -373,7 +373,7 @@
         }
 
         &:focus{
-            border: 2px solid #f39c12;
+            border: 2px solid #023f68;
             box-shadow: 0 0 5px #f39c12;
             outline: none;
         }
@@ -397,19 +397,9 @@
     margin-bottom: 0.8rem;
     padding: 0.25rem;
     cursor: pointer;
-    
-    &:hover{
-
-        .logo-container__logo{
-            filter: brightness(80%)
-        }
-
-        .logo-container__title{
-            color: #0065a8;
-        }
-    }
 
     &__logo{
+        filter: brightness(80%);
         width: 5.5rem;
         margin-right: 5px;
         @media only screen and (max-width: 500px) {
@@ -420,7 +410,7 @@
     &__title{
         text-align: center;
         font-family: 'Strait', sans-serif;
-        color: #0082d8;
+        color: #04558B;
         font-size: 2.5rem;
 
         @media only screen and (max-width: 500px) {

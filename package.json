@@ -15,7 +15,8 @@
     "react-hook-form": "^6.12.2",
     "react-i18next": "^11.7.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "start": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

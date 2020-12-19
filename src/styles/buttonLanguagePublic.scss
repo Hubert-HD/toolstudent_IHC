@@ -26,7 +26,7 @@
     width: 20px;
     height: 20px;
     background-color: #ecf0f1;
-    color: #3498db;
+    color: #04558B;
     border-radius: 20%;
     text-align: center;
     text-decoration: none;
@@ -36,7 +36,8 @@
     border: 0 solid transparent;
     
     &-active{
-      background-color: #3498db;
+      border: 1px solid white;
+      background-color: #04558B;
       color: #ecf0f1;
     }
   }

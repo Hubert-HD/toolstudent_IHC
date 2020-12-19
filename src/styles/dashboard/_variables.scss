@@ -10,14 +10,14 @@ $color-text: white;
 
 //Sidebar-Theme
 $heightContainerUser: 5em;
-$bg-sidebar: #0572bb;
+$bg-sidebar: #04558B;
 
 //Content-Layout
 $heightHeader: 4em;
 $heightFooter: 4em;
 $bg-header: white;
 $bg-main: #e0f3ff;
-$bg-footer: #0082d8;
+$bg-footer: #04558B;
 
 @mixin style-design($visible, $position, $z-index, $content, $orientation, $bg-design, $color-design) {
     @if $visible {
