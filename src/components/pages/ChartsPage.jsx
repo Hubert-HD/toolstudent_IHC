@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import { useTranslation } from "react-i18next";
 import "../../styles/curriculum.scss"
 
 // Nuevos estilos
@@ -6,12 +7,16 @@ import "../../styles/curriculum.css"
 
 import {Bar, Line, Pie, Radar, Polar} from 'react-chartjs-2';
 
-const ChartsPage = () => (
+const ChartsPage = () => {
+
+    let {t} = useTranslation();
+
+    return (
     <div className="curriculum-container">
         
         {/* POLAR */}
         <div className="marco">
-            <h1>Gráfico Polar</h1>
+            <h1>{t("chart.polar")}</h1>
             <Polar 
                 data = {{
                     labels: ['IHC', 'EMAT', 'MIR', 'ADA', 'EE', 'AC'],
@@ -57,12 +62,12 @@ const ChartsPage = () => (
 
         {/* BAR */}
         <div className="marco">
-        <h1>Gráfico de Barras</h1>
+            <h1>{t("chart.bar")}</h1>
             <Bar 
                 data = {{
                     labels: ['IHC', 'EMAT', 'ADA', 'MIR', 'AC', 'EE'],
                     datasets: [{
-                        label: 'Notas finales del semestre 2020 B',
+                        label: '2020 B',
                         data: [14, 17, 13, 20, 11, 16],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -101,7 +106,7 @@ const ChartsPage = () => (
 
         {/* PIE */}
         <div className="marco">
-            <h1>Gráfico de Tipo Torta</h1>
+            <h1>{t("chart.pie")}</h1>
             <Pie 
                 data = {{
                     labels: ['MIR','IHC', 'EE', 'EMAT', 'ADA', 'AC'],
@@ -137,13 +142,13 @@ const ChartsPage = () => (
 
         {/* LINE */}
         <div className="marco">
-            <h1>Gráfico Lineal</h1>
+            <h1>{t("chart.linear")}</h1>
             <Line 
                 data = {{
-                    labels: ['Entrada ', 'Examen 1', 'Examen 2', 'Subsanación', 'Examen 3'],
+                    labels: ['E1', 'EC1', 'E2', 'EC2', 'E3', 'EC3'],
                     datasets: [{
-                        label: 'Notas de EMAT',
-                        data: [13, 10, 14, 12, 11],
+                        label: 'EMAT',
+                        data: [13, 10, 14, 12, 11, 16],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                         ],
@@ -153,8 +158,8 @@ const ChartsPage = () => (
                         borderWidth: 1
                     },
                     {
-                        label: 'Notas de IHC',
-                        data: [10, 12, 8, 15, 19],
+                        label: 'IHC',
+                        data: [10, 12, 8, 14, 19, 13],
                         backgroundColor: [
                             'rgba(54, 162, 235, 0.2)',
                         ],
@@ -184,12 +189,12 @@ const ChartsPage = () => (
 
         {/* RADAR */}
         <div className="marco">
-            <h1>Gráfico de Tipo Radar</h1>
+            <h1>{t("chart.radar")}</h1>
             <Radar 
                 data = {{
                     labels: ['IHC', 'EMAT', 'MIR', 'ADA', 'EE', 'AC'],
                     datasets: [{
-                        label: 'Notas finales del semestre 2020 B',
+                        label: '2020 B',
                         data: [15, 17, 19, 13, 16, 11],
                         backgroundColor: [
                             'rgba(153, 102, 255, 0.2)',
@@ -220,6 +225,7 @@ const ChartsPage = () => (
 
         
     </div>
-)
+    );
+}
 
 export default ChartsPage

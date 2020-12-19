@@ -16,6 +16,7 @@ import TasksPage from "../pages/TasksPage";
 import CurriculumPage from "../pages/CurriculumPage";
 
 import ChartsPage from "../pages/ChartsPage"; // CHANGED
+import SiteMapPage from "../pages/SiteMapPage";
 
 const Dashboard = () => {
 
@@ -90,7 +91,7 @@ const Dashboard = () => {
               <Route path="/calculadora" component={ CalculatorPage } />
 
               <Route path="/charts" component={ ChartsPage } /> {/* CHANGED */}
-              
+              <Route path="/sitemap" component={ SiteMapPage } />
               <Route component={ NotFoundPage } />
             </Switch> 
           </div>

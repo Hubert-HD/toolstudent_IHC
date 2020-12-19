@@ -28,6 +28,8 @@
   "link.task": "Mis tareas",
   "link.curriculum": "Malla Curricular",
   "link.calculator": "Calculadora",
+  "link.charts": "Gráficos",
+  "link.sitemap": "Mapa de Sitio",
   "logout": "Cerrar Sessión",
   "language.title": "Idioma",
   "table.title.name": "NOMBRE DEL CURSO", 
@@ -60,6 +62,12 @@
   "validate.email": "* El campo correo electrónico es obligatorio",
   "validate.password.confirm": "* El campo confirmar contraseña es obligatorio",
   "validate.invalid": "Su usuario o contraseña son incorrectas",
-  "validate.invalid.create": "Ya existe una cuenta con este usuario"
+  "validate.invalid.create": "Ya existe una cuenta con este usuario",
+  "chart.polar": "Gráfico Polar",
+  "chart.bar": "Gráfico de Barras",
+  "chart.pie": "Gráfico Circular",
+  "chart.linear": "Gráfico Lineal",
+  "chart.radar": "Gráfico de Radar"
+  
 }
 

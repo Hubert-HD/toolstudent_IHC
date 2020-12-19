@@ -12,6 +12,7 @@ const LinkItemList = () => {
     curriculum: history.location.pathname === "/malla-curricular",
     calculator: history.location.pathname === "/calculadora",
     charts: history.location.pathname === "/charts",
+    sitemap: history.location.pathname == "/sitemap",
   })
   return (
     <ul className="container-linkList">
@@ -24,6 +25,7 @@ const LinkItemList = () => {
               curriculum: false,
               calculator: false,
               charts: false,
+              sitemap: false,
             })
             history.push("/")
           }}>
@@ -40,6 +42,7 @@ const LinkItemList = () => {
               curriculum: false,
               calculator: false,
               charts: false,
+              sitemap: false,
             })
             history.push("/cursos")
             }
@@ -57,6 +60,7 @@ const LinkItemList = () => {
               curriculum: false,
               calculator: false,
               charts: false,
+              sitemap: false,
             })
             history.push("/tareas")
             }
@@ -74,6 +78,7 @@ const LinkItemList = () => {
               curriculum: true,
               calculator: false,
               charts: false,
+              sitemap: false,
             })
             history.push("/malla-curricular")
             }
@@ -91,6 +96,7 @@ const LinkItemList = () => {
               curriculum: false,
               calculator: true,
               charts: false,
+              sitemap: false,
             })
             history.push("/calculadora")
             }
@@ -109,18 +115,37 @@ const LinkItemList = () => {
               task: false,
               curriculum: false,
               calculator: false,
-              charts: true
+              charts: true,
+              sitemap: false,
             })
             history.push("/charts")
             }
           }>
           {/* <i className={"iconLink fas fa-calculator"}></i> */}
           <i className="iconLink fas fa-chart-pie"></i>
-          <span className="cartelLink">Gráficos</span>  {/* CHANGED */}
+          <span className="cartelLink">{t("link.charts")}</span>  {/* CHANGED */}
           {/* <span className="cartelLink">{t("link.calculator")}</span> */}
         </Link>
       </li>
 
+      <li className={"container-linkItem"}>
+        <Link className={(linkActive.sitemap) ? "linkItem linkItem-active" : "linkItem"} onClick={() => {
+            setLinkActive({
+              note: false,
+              course: false,
+              task: false,
+              curriculum: false,
+              calculator: false,
+              charts: false,
+              sitemap: true,
+            })
+            history.push("/sitemap")
+            }
+          }>
+          <i className={"iconLink fas fa-sitemap"}></i>
+          <span className="cartelLink">{t("link.sitemap")}</span>
+        </Link>
+      </li>
     </ul>
     )
   }

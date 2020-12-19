@@ -28,6 +28,8 @@
   "link.task": "My tasks",
   "link.curriculum": "Curriculum",
   "link.calculator": "Calculator",
+  "link.charts": "Charts",
+  "link.sitemap": "Sitemap",
   "logout": "Logout",
   "language.title": "Language",
   "table.title.name": "COURSE NAME", 
@@ -60,5 +62,10 @@
   "validate.email": "* The email field is required",
   "validate.password.confirm": "* The confirm password field is required",
   "validate.invalid": "Your username or password is incorrect",
-  "validate.invalid.create": "An account with this user already exists"
+  "validate.invalid.create": "An account with this user already exists",
+  "chart.polar": "Polar Chart",
+  "chart.bar": "Bar Chart",
+  "chart.pie": "Pie Chart",
+  "chart.linear": "Linear Chart",
+  "chart.radar": "Radar Chart"
 }
