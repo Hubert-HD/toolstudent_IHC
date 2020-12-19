@@ -10,7 +10,8 @@ const LinkItemList = () => {
     course: history.location.pathname === "/cursos",
     task: history.location.pathname === "/tareas",
     curriculum: history.location.pathname === "/malla-curricular",
-    calculator: history.location.pathname === "/calculadora"
+    calculator: history.location.pathname === "/calculadora",
+    charts: history.location.pathname === "/charts",
   })
   return (
     <ul className="container-linkList">
@@ -21,7 +22,8 @@ const LinkItemList = () => {
               course: false,
               task: false,
               curriculum: false,
-              calculator: false
+              calculator: false,
+              charts: false,
             })
             history.push("/")
           }}>
@@ -36,7 +38,8 @@ const LinkItemList = () => {
               course: true,
               task: false,
               curriculum: false,
-              calculator: false
+              calculator: false,
+              charts: false,
             })
             history.push("/cursos")
             }
@@ -52,7 +55,8 @@ const LinkItemList = () => {
               course: false,
               task: true,
               curriculum: false,
-              calculator: false
+              calculator: false,
+              charts: false,
             })
             history.push("/tareas")
             }
@@ -68,7 +72,8 @@ const LinkItemList = () => {
               course: false,
               task: false,
               curriculum: true,
-              calculator: false
+              calculator: false,
+              charts: false,
             })
             history.push("/malla-curricular")
             }
@@ -84,7 +89,8 @@ const LinkItemList = () => {
               course: false,
               task: false,
               curriculum: false,
-              calculator: true
+              calculator: true,
+              charts: false,
             })
             history.push("/calculadora")
             }
@@ -96,13 +102,14 @@ const LinkItemList = () => {
 
       {/* CHANGED */}
       <li className={"container-linkItem"}>
-        <Link className={(linkActive.calculator) ? "linkItem linkItem-active" : "linkItem"} onClick={() => {
+        <Link className={(linkActive.charts) ? "linkItem linkItem-active" : "linkItem"} onClick={() => {
             setLinkActive({
               note: false,
               course: false,
               task: false,
               curriculum: false,
-              calculator: true
+              calculator: false,
+              charts: true
             })
             history.push("/charts")
             }
